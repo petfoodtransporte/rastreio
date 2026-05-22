@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pet food transporte - Rastreamento</title>
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f3f4f6;
+      color: #222;
+    }
+
+    .topbar {
+      background: #2d3748;
+      color: white;
+      padding: 18px 30px;
+      font-size: 24px;
+      font-weight: bold;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+
+    .subtitle {
+      font-size: 13px;
+      font-weight: normal;
+      opacity: 0.85;
+      margin-top: 4px;
+    }
+
+    .container {
+      max-width: 980px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+
+    .search-box, .card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      margin-bottom: 25px;
+      overflow: hidden;
+    }
+
+    .search-header, .card-header {
+      background: #e5e7eb;
+      padding: 16px 22px;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    .search-content {
+      padding: 20px;
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    input {
+      flex: 1;
+      min-width: 220px;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 15px;
+    }
+
+    button {
+      background: #2d3748;
+      color: white;
+      border: none;
+      padding: 12px 18px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .details {
+      padding: 24px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px 40px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .label {
+      font-weight: bold;
+    }
+
+    .status {
+      padding: 22px 24px;
+      background: #f9fafb;
+      border-left: 5px solid #16a34a;
+      font-size: 18px;
+    }
+
+    .ok {
+      color: #16a34a;
+      font-weight: bold;
+      font-size: 22px;
+    }
+
+    .timeline {
+      padding: 24px;
+    }
+
+    .timeline h3 {
+      margin-top: 0;
+      margin-bottom: 22px;
+    }
+
+    .item {
+      display: flex;
+      gap: 14px;
+      margin-bottom: 22px;
+      align-items: flex-start;
+    }
+
+    .dot {
+      width: 14px;
+      height: 14px;
+      background: #16a34a;
+      border-radius: 50%;
+      margin-top: 4px;
+      flex-shrink: 0;
+    }
+
+    .muted {
+      color: #666;
+    }
+
+    @media (max-width: 700px) {
+      .details {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="topbar">
+    Pet food transporte
+    <div class="subtitle">Sistema de Rastreamento de Encomendas</div>
+  </div>
+
+  <div class="container">
+
+    <div class="search-box">
+      <div class="search-header">Consultar rastreamento</div>
+      <div class="search-content">
+        <input value="159005542423081" readonly>
+        <button>Rastrear Pedido</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">Embalagem 1</div>
+
+      <div class="details">
+        <div><span class="label">Data de envio:</span> 04/05/2026</div>
+        <div><span class="label">Nº de rastreamento:</span> 159005542423081</div>
+        <div><span class="label">Transportadora:</span> Pet food transporte</div>
+        <div><span class="label">Serviço de envio:</span> Standard</div>
+      </div>
+
+      <div class="status">
+        <div class="ok">✅ Entregue</div>
+        Entrega concluída em <strong>06/05/2026</strong>
+      </div>
+
+      <div class="timeline">
+        <h3>Histórico de Rastreamento</h3>
+
+        <div class="item">
+          <div class="dot"></div>
+          <div><strong>06/05/2026</strong><br><span class="muted">Entregue ao destinatário</span></div>
+        </div>
+
+        <div class="item">
+          <div class="dot"></div>
+          <div><strong>06/05/2026</strong><br><span class="muted">Saiu para entrega</span></div>
+        </div>
+
+        <div class="item">
+          <div class="dot"></div>
+          <div><strong>05/05/2026</strong><br><span class="muted">Em transporte</span></div>
+        </div>
+
+        <div class="item">
+          <div class="dot"></div>
+          <div><strong>04/05/2026</strong><br><span class="muted">Em separação</span></div>
+        </div>
+
+        <div class="item">
+          <div class="dot"></div>
+          <div><strong>04/05/2026</strong><br><span class="muted">Pedido recebido</span></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</body>
+</html>
